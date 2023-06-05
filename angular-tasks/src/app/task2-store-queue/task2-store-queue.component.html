@@ -1,4 +1,15 @@
-<form class="flex justify-center p-28" action="">
-  <input class="border-2 border-black p-1" type="text">
-  <button class="border-2 border-black ml-3 p-1" type="submit">Checkout</button>
-</form>
+<div class="flex justify-center p-28" action="">
+  <input [(ngModel)]="itemsNumber" class="border-2 border-black p-1" type="text">
+  <button (click)="defineCheckout()" class="border-2 border-black ml-3 p-1" type="button">Checkout</button>
+</div>
+
+<div class="checkouts flex flex-row gap-4 justify-around text-center">
+  <div class="" *ngFor="let checkout of checkouts, index as i;">
+    <div class="checkout border-2 border-black w-32 h-32 text-4xl">
+      {{checkout.id}}
+    </div>
+    <div *ngFor="let item of checkout.items">
+      {{item}}
+    </div>
+  </div>
+</div>
