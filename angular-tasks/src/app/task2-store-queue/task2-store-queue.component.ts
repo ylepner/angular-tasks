@@ -43,6 +43,7 @@ export class Task2StoreQueueComponent {
   queue: number[] = []
 
   constructor() {
+    this.startInterval()
   }
 
   addToQueue(line: Checkout) {
@@ -64,5 +65,18 @@ export class Task2StoreQueueComponent {
     }
     this.addToQueue(line)
     console.log(line)
+  }
+
+  startInterval() {
+    setInterval(() => {
+      for (let line of checkouts) {
+        if (line.items[0] > 0) {
+          line.items[0] -= 1
+        }
+        else {
+          line.items.shift()
+        }
+      }
+    }, 1000)
   }
 }
