@@ -1,9 +1,14 @@
-<div class="grid place-items-center pt-28">
-  <div *ngFor="let number of numbers; let index as i">
-    <button (click)="addPressedNumbers(number)" class="flex border-black border-2 p-3 m-3">{{number}}</button>
+<div class="flex justify-center">
+  <div class="pt-28 w-52">
+    <div class="flex justify-center bg-black border-2 border-black h-7 text-white text-2xl">
+      <span *ngFor="let asterisk of asterisks">
+        {{asterisk}}
+      </span>
+    </div>
+    <div class="grid grid-cols-3 place-items-center">
+      <div *ngFor="let number of numbers; let index as i">
+        <button (click)="addPressedNumbers(number)" class="flex border-black border-2 p-3 m-3">{{number}}</button>
+      </div>
+    </div>
   </div>
 </div>
-
-<span *ngFor="let asterisk of asterisks" class="bg-black text-white">
-  {{asterisk}}
-</span>
