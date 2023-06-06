@@ -6,12 +6,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { Task1Component } from './task1/task1.component';
 import { Task2StoreQueueComponent } from './task2-store-queue/task2-store-queue.component';
+import { Task3PasscodeComponent } from './task3-passcode/task3-passcode.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     Task1Component,
-    Task2StoreQueueComponent
+    Task2StoreQueueComponent,
+    Task3PasscodeComponent
   ],
   imports: [
     BrowserModule,
