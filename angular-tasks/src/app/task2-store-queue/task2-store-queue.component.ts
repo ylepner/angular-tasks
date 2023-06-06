@@ -57,7 +57,7 @@ export class Task2StoreQueueComponent {
     let minItems: number = +Infinity
     let line: Checkout = { id: 0, items: [] }
     for (let checkout of checkouts) {
-      const allItemsInQueue = (checkout.items.reduce((a, b) => a + b, 0))
+      const allItemsInQueue = checkout.items.reduce((a, b) => a + b, 0)
       if (allItemsInQueue < minItems) {
         minItems = allItemsInQueue
         line = checkout
