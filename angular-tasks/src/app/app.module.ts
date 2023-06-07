@@ -12,6 +12,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
+import { Task4AddBlocksComponent } from './task4-add-blocks/task4-add-blocks.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { MatButtonModule } from '@angular/material/button';
     Task1Component,
     Task2StoreQueueComponent,
     Task3PasscodeComponent,
+    Task4AddBlocksComponent,
   ],
   imports: [
     BrowserModule,
