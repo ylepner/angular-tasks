@@ -10,17 +10,24 @@ export class Task3PasscodeComponent {
   password: number[] = [7, 3, 1, 6]
   pressedNumbers: number[] = []
   asterisks: string[] = []
+  message: string = ''
+  wrongMessage: string = 'Wrong password, please try again'
+  rightMessage: string = 'Welcome!'
 
 
-  addPressedNumbers(number: number) {
+  checkPassword(number: number) {
     this.asterisks.push('*')
     this.pressedNumbers.push(number)
     console.log(`arr length = ${this.pressedNumbers.length}`)
     if (this.pressedNumbers.length === 4) {
       if (String(this.pressedNumbers) === String(this.password)) {
+        this.message = 'Welcome!'
         this.clearData()
+        this.clearMessage()
         return true
       } else {
+        this.message = 'Wrong password, please try again'
+        this.clearMessage()
         this.clearData()
         return false
       }
@@ -32,5 +39,11 @@ export class Task3PasscodeComponent {
   clearData() {
     this.pressedNumbers = []
     this.asterisks = []
+  }
+
+  clearMessage() {
+    setTimeout(() => {
+      this.message = ''
+    }, 2000);
   }
 }

@@ -1,13 +1,16 @@
 <div class="flex justify-center">
   <div class="pt-28 w-52">
-    <div class="flex justify-center bg-black border-2 border-black h-7 text-white text-2xl">
-      <span *ngFor="let asterisk of asterisks">
+    <div class="flex justify-center bg-black border-2 border-black h-7 text-white text-xs">
+      <div *ngIf="message">
+        {{message}}
+      </div>
+      <span class="text-2xl" *ngFor="let asterisk of asterisks">
         {{asterisk}}
       </span>
     </div>
     <div class="grid grid-cols-3 place-items-center">
       <div *ngFor="let number of numbers; let index as i">
-        <button (click)="addPressedNumbers(number)" class="flex border-black border-2 p-3 m-3">{{number}}</button>
+        <button (click)="checkPassword(number)" class="flex border-black border-2 p-3 m-3">{{number}}</button>
       </div>
     </div>
   </div>
