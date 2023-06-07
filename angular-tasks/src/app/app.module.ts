@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { Task1Component } from './task1/task1.component';
 import { Task2StoreQueueComponent } from './task2-store-queue/task2-store-queue.component';
 import { Task3PasscodeComponent } from './task3-passcode/task3-passcode.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { Task3PasscodeComponent } from './task3-passcode/task3-passcode.componen
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
