@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class Task4AddBlocksComponent {
   blocks: string[] = ['a', 'b', 'c']
+  value: string = ''
+
+  addValue(event: any) {
+    const newValue = event.target.value
+    this.value = newValue
+  }
+
+  addBlock(index: number) {
+    this.blocks.splice(index + 1, 0, this.value)
+  }
+
 }
