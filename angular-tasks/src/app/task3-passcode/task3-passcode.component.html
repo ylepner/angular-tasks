@@ -1,6 +1,6 @@
 <div class="flex justify-center">
   <div class="pt-28 w-52">
-    <div class="flex justify-center bg-black border-2 border-black h-7 text-white text-xs">
+    <div class="flex justify-center border-2 border-black h-7 text-black text-xs">
       <div *ngIf="message">
         {{message}}
       </div>
@@ -10,7 +10,8 @@
     </div>
     <div class="grid grid-cols-3 place-items-center">
       <div *ngFor="let number of numbers; let index as i">
-        <button (click)="checkPassword(number)" class="flex border-black border-2 p-3 m-3">{{number}}</button>
+        <button mat-fab extended color="accent" (click)="checkPassword(number)"
+          class="flex border-black border-2 p-3 m-3">{{number}}</button>
       </div>
     </div>
   </div>
