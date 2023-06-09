@@ -9,13 +9,16 @@ export class Task4AddBlocksComponent {
   blocks: string[] = ['a', 'b', 'c']
   value: string = ''
 
-  addValue(event: any) {
-    const newValue = event.target.value
-    this.value = newValue
+  updateValue(value: string, index: number) {
+
+    this.blocks[index] = value;
   }
 
   addBlock(index: number) {
     this.blocks.splice(index + 1, 0, this.value)
   }
 
+  getString() {
+    return this.blocks.join('')
+  }
 }
