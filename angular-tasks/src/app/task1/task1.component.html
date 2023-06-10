@@ -1,4 +1,4 @@
-<table>
+<table class="m-10">
   <tr>
     <th>Name</th>
     <th>Year</th>
@@ -9,7 +9,6 @@
   </tr>
 </table>
 
-<input [ngModel]="userName" (ngModelChange)="changeName($event)" type="text" #inputElement>
-<button (click)="submitName()">OK</button>
-
-{{localUsers$ | async | json}}
+<input class="border-2 border-black m-5" [ngModel]="userName" (ngModelChange)="changeName($event)" type="text"
+  #inputElement>
+<button class="p-10" (click)="submitName()" mat-flat-button>OK</button>
