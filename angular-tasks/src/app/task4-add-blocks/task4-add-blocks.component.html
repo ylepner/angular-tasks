@@ -1,6 +1,6 @@
 <div class="flex justify-center p-32">
   <div class="relative w-20 h-20 border-2 border-black rounded-md flex justify-center items-center m-3"
-    *ngFor="let block of blocks; index as i">
+    *ngFor="let block of blocks; index as i; trackBy: trackByIndex">
     <input [ngModel]="block" (ngModelChange)="updateValue($event, i)"
       class="cursor-pointer w-10 text-center border-blue-900 border-2 rounded-md">
     <span class="space absolute cursor-pointer" (click)="addBlock(i)"></span>

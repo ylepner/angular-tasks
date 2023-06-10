@@ -21,4 +21,8 @@ export class Task4AddBlocksComponent {
   getString() {
     return this.blocks.join('')
   }
+
+  trackByIndex(n: number, el: string) {
+    return n
+  }
 }
